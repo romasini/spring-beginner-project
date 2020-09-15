@@ -24,7 +24,8 @@ public class Cart {
     }
 
     public void deleteProduct(long id){
-        productList.remove(productService.getProduct(id));
+        //productList.remove(productService.getProduct(id));
+        productList.removeIf(p->p.getId()==id);
     }
 
     @Override
